@@ -72,4 +72,11 @@ public class TipoCambioServiceImpl implements TipoCambioService {
 
 	}
 
+	@Override
+	public void actTipCambio(long nuevoMonto, String monedaOrig) {
+		tipoCambioRepos.actTipCambioRep(monedaOrig,nuevoMonto);
+		
+		
+	}
+
 }

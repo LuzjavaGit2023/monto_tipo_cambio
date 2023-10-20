@@ -9,5 +9,5 @@ public interface TipoCambioService {
 
 	TipCambMsgResponse consultParaTipCambio(long monto, @PathVariable String monedaOrig,
 			@PathVariable String monedaDest) throws UnprocessableEntityException;
-
+	void actTipCambio(long monto, @PathVariable String monedaOrig);
 }

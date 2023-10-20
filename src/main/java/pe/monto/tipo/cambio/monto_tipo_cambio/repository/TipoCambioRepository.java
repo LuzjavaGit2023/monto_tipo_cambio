@@ -15,4 +15,7 @@ public interface TipoCambioRepository extends JpaRepository<TipoCambioEntity,Lon
 //	@Query("Select t from TipoCambioEntity t where upper(t.monedaOrigen) like :modorigen and upper(t.monedaDestino) like :moddestino")
 //	TipoCambioEntity findTcambio(@Param("modorigen") String modorigen, @Param("moddestino") String moddestino);
 	
+	@Query("update TipoCambioEntity t set t.tipoCambioOrigen=:tipCambio where t.monedaOrigen=:modorigen")
+	TipoCambioEntity actTipCambioRep(@Param("modorigen") String modorigen, @Param("tipCambio") long tipCambio);
+	
 }
